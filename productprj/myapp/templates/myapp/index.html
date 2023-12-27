@@ -8,7 +8,7 @@
 {% block content %}
 <div class="container p-3 border">
     <h4>Активные записи</h4>
-    {% if tasks %}
+    {% if orders_all %}
     <table class="table table-hover">
     <thead>
       <tr>
@@ -21,7 +21,7 @@
       </tr>
     </thead>
         <tbody>
-        {% for elem in tasks %}
+        {% for elem in orders_all %}
             <tr>
                 <td>{{ elem.order_number }}</td>
                 <td>{{ elem.order_date }}</td>

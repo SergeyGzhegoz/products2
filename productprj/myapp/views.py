@@ -1,13 +1,24 @@
 from django.shortcuts import render, redirect
-from .models import Orders
+from .models import Orders, Products, Customers
 from .forms import OrderForm, ProdForm, CustForm
 
 
 def index(request):
     orders_all = Orders.objects.order_by('id')
     return render(request, 'myapp/index.html', {'title': 'Главная страница сайта',
-                                                'tasks': orders_all})
+                                                'orders_all': orders_all})
 
+
+def products(request):
+    prod_all = Products.objects.order_by('id')
+    return render(request, 'myapp/products.html', {'title': 'Товары',
+                                                'prod_all': prod_all})
+
+
+def customers(request):
+    cust_all = Customers.objects.order_by('id')
+    return render(request, 'myapp/customers.html', {'title': 'Клиенты',
+                                                'cust_all': cust_all})
 
 def order_form(request):
     error = ""
