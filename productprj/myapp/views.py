@@ -20,6 +20,7 @@ def customers(request):
     return render(request, 'myapp/customers.html', {'title': 'Клиенты',
                                                 'cust_all': cust_all})
 
+
 def order_form(request):
     error = ""
     if request.method == 'POST':
