@@ -16,4 +16,3 @@
 
 Необходимо добавить: редактирование, удаление, поиск, поиск по условию.
 
-![image](https://github.com/SergeyGzhegoz/products2/assets/5243852/ab958499-947f-49f8-a870-abc3ccbefbb4)
